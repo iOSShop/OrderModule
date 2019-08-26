@@ -13,9 +13,13 @@
 		33AF531D23138A7600A92833 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33AF531C23138A7600A92833 /* Assets.xcassets */; };
 		33AF532023138A7600A92833 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33AF531E23138A7600A92833 /* LaunchScreen.storyboard */; };
 		33AF532323138A7600A92833 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF532223138A7600A92833 /* main.m */; };
+		33AF533123138B6000A92833 /* OrderMakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF533023138B6000A92833 /* OrderMakeViewController.m */; };
+		33AF533423138C0600A92833 /* Target_Order.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AF533323138C0600A92833 /* Target_Order.m */; };
+		9140DF4BC7791BFD0901A498 /* libPods-OrderModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E9992A6A5A6D9549385862 /* libPods-OrderModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07E9992A6A5A6D9549385862 /* libPods-OrderModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrderModule.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF531023138A7600A92833 /* OrderModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrderModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33AF531323138A7600A92833 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		33AF531423138A7600A92833 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +30,12 @@
 		33AF531F23138A7600A92833 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33AF532123138A7600A92833 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33AF532223138A7600A92833 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33AF532F23138B6000A92833 /* OrderMakeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderMakeViewController.h; sourceTree = "<group>"; };
+		33AF533023138B6000A92833 /* OrderMakeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderMakeViewController.m; sourceTree = "<group>"; };
+		33AF533223138C0600A92833 /* Target_Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Target_Order.h; sourceTree = "<group>"; };
+		33AF533323138C0600A92833 /* Target_Order.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Target_Order.m; sourceTree = "<group>"; };
+		992B2A29AE44E6B00EF7F80E /* Pods-OrderModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderModule.release.xcconfig"; path = "Target Support Files/Pods-OrderModule/Pods-OrderModule.release.xcconfig"; sourceTree = "<group>"; };
+		F608C2FEA473A0B82DF86D3D /* Pods-OrderModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrderModule.debug.xcconfig"; path = "Target Support Files/Pods-OrderModule/Pods-OrderModule.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9140DF4BC7791BFD0901A498 /* libPods-OrderModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,8 @@
 			children = (
 				33AF531223138A7600A92833 /* OrderModule */,
 				33AF531123138A7600A92833 /* Products */,
+				9BA167E8F70D26CAFACE95B8 /* Pods */,
+				EF9A8FFA9D7514F24E0C0456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +71,7 @@
 		33AF531223138A7600A92833 /* OrderModule */ = {
 			isa = PBXGroup;
 			children = (
+				33AF532923138AD300A92833 /* OrderModule */,
 				33AF531323138A7600A92833 /* AppDelegate.h */,
 				33AF531423138A7600A92833 /* AppDelegate.m */,
 				33AF531623138A7600A92833 /* ViewController.h */,
@@ -71,6 +85,50 @@
 			path = OrderModule;
 			sourceTree = "<group>";
 		};
+		33AF532923138AD300A92833 /* OrderModule */ = {
+			isa = PBXGroup;
+			children = (
+				33AF532B23138AD300A92833 /* Actions */,
+				33AF532A23138AD300A92833 /* Controller */,
+			);
+			path = OrderModule;
+			sourceTree = "<group>";
+		};
+		33AF532A23138AD300A92833 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33AF532F23138B6000A92833 /* OrderMakeViewController.h */,
+				33AF533023138B6000A92833 /* OrderMakeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33AF532B23138AD300A92833 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				33AF533223138C0600A92833 /* Target_Order.h */,
+				33AF533323138C0600A92833 /* Target_Order.m */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		9BA167E8F70D26CAFACE95B8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F608C2FEA473A0B82DF86D3D /* Pods-OrderModule.debug.xcconfig */,
+				992B2A29AE44E6B00EF7F80E /* Pods-OrderModule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF9A8FFA9D7514F24E0C0456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07E9992A6A5A6D9549385862 /* libPods-OrderModule.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,6 +136,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33AF532623138A7600A92833 /* Build configuration list for PBXNativeTarget "OrderModule" */;
 			buildPhases = (
+				5C8B3D29543599340BAF0084 /* [CP] Check Pods Manifest.lock */,
 				33AF530C23138A7600A92833 /* Sources */,
 				33AF530D23138A7600A92833 /* Frameworks */,
 				33AF530E23138A7600A92833 /* Resources */,
@@ -136,12 +195,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5C8B3D29543599340BAF0084 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrderModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33AF530C23138A7600A92833 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33AF533423138C0600A92833 /* Target_Order.m in Sources */,
 				33AF531823138A7600A92833 /* ViewController.m in Sources */,
+				33AF533123138B6000A92833 /* OrderMakeViewController.m in Sources */,
 				33AF532323138A7600A92833 /* main.m in Sources */,
 				33AF531523138A7600A92833 /* AppDelegate.m in Sources */,
 			);
@@ -283,6 +369,7 @@
 		};
 		33AF532723138A7600A92833 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F608C2FEA473A0B82DF86D3D /* Pods-OrderModule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +386,7 @@
 		};
 		33AF532823138A7600A92833 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992B2A29AE44E6B00EF7F80E /* Pods-OrderModule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
