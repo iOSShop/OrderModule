@@ -28,9 +28,15 @@
 }
 
 - (void)clickPay {
-    if (self.successBlock) {
-        self.successBlock([NSString stringWithFormat:@"成功购买%zd件商品%@", self.goodsCount, self.goodsID]);
-    }
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:@"付款成功" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确认" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        if (self.successBlock) {
+            self.successBlock([NSString stringWithFormat:@"成功购买%zd件商品%@", self.goodsCount, self.goodsID]);
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)viewWillLayoutSubviews {
