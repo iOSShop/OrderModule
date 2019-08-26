@@ -18,12 +18,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"生成订单";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"付款" style:UIBarButtonItemStylePlain target:self action:@selector(clickPay)];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self.view addSubview:self.textLabel];
     
     self.textLabel.text = [NSString stringWithFormat:@"订单中有商品%@的%zd件", self.goodsID, self.goodsCount];
+}
+
+- (void)clickPay {
+    if (self.successBlock) {
+        self.successBlock([NSString stringWithFormat:@"成功购买%zd件商品%@", self.goodsCount, self.goodsID]);
+    }
 }
 
 - (void)viewWillLayoutSubviews {

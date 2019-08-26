@@ -17,6 +17,7 @@
     OrderMakeViewController *orderViewController = [[OrderMakeViewController alloc] init];
     orderViewController.goodsCount = [params[@"goodsCount"] integerValue];
     orderViewController.goodsID = params[@"goodsID"];
+    orderViewController.successBlock = params[@"successBlock"];
     return orderViewController;
 }
 
